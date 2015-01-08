@@ -126,7 +126,7 @@ if ($permission1 != 0) {
         <li class="subfirst"><a href="search.php?searching=1">Neuron type</a></li>
         <li><a href="find_author.php?searching=1">Author</a></li>
         <li><a href="find_pmid.php?searching=1">PMID/ISBN</a></li>
-        <li><a href="find_neuron.php?searching=1">Neuron</a></li>
+<?php //<li><a href="find_neuron.php?searching=1">Neuron</a></li> ?>
       </ul>
     </li>
     <li class="toplast"><a href="help.php" style="height:32px;line-height:32px;"><img src="function/menu_support_files/help.png" alt=""/>Help</a></li>
@@ -212,7 +212,7 @@ jQuery(document).ready(function() {
           <br><br>
           <hr class='hr2'/>
           <font class='font3' color='#000000'>
-            NOTICE: Non-licensed copyrighted content that may be incorporated into this not-for-profit, educational web portal was vetted using the "fair use" criteria defined in <a href="http://www.copyright.gov/title17/92chap1.html#107" target="_blank">Title 17 of the U.S. Code, § 107</a>. This content, cited throughout this portal, may be protected by Copyright Law and unavailable for reuse.  Except otherwise noted, this web portal is &copy; 2014 by George Mason University, under a <a href =' http://creativecommons.org/licenses/by-sa/3.0/' target="_blank">Creative Commons Attribution-ShareAlike [CC BY-SA] license</a>. 
+            NOTICE: Non-licensed copyrighted content that may be incorporated into this not-for-profit, educational web portal was vetted using the "fair use" criteria defined in <a href="http://www.copyright.gov/title17/92chap1.html#107" target="_blank">Title 17 of the U.S. Code, ï¿½ 107</a>. This content, cited throughout this portal, may be protected by Copyright Law and unavailable for reuse.  Except otherwise noted, this web portal is &copy; 2014 by George Mason University, under a <a href =' http://creativecommons.org/licenses/by-sa/3.0/' target="_blank">Creative Commons Attribution-ShareAlike [CC BY-SA] license</a>. 
 
           <br /><p><? echo $info; ?>
           <br />Last Update: 21 Nov 2014 (<a href="Help_Release_Notes.php">v1.0&alpha; R 4J</a>)</font>
