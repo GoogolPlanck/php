@@ -45,15 +45,7 @@ jQuery(document).ready(function() {
   $('div#menu_main_button_new_clr').css('display','block');
 });
 </script>
-<?php 
-}
-?>
 
-$perm = $_SESSION['perm'];
-//if ($perm == NULL)
-if ($perm == 1 && $_SESSION['flag']== NULL)
-	header("Location:error1.html");
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
 include ("permission_check.php");

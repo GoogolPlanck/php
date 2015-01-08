@@ -1,6 +1,6 @@
 <?php
 
-$query = "SELECT permission FROM user WHERE id = '1'";
+$query = "SELECT permission FROM user WHERE id = '2'";
 $rs = mysql_query($query);
 while(list($permission) = mysql_fetch_row($rs)) {
 	if ($permission == 0) {

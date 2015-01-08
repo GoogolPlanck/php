@@ -7,13 +7,6 @@ include ("access_db.php");
 
 <?php
 include ("permission_check.php");
-/*
-include ("access_db.php");
-//print_r($_SESSION);
-$perm = $_SESSION['perm'];
-if ($perm == NULL)
-	header("Location:error1.html");
-*/	
 require_once('class/class.temporary_author.php');
 require_once('class/class.author.php');	
 require_once('class/class.articleauthorrel.php');	

@@ -100,6 +100,22 @@ else
 <title>Find PMID/ISBN</title>
 
 <script type="text/javascript" src="style/resolution.js"></script>
+<script src="DataTables-1.9.4/media/js/jquery.js" type="text/javascript"></script>
+<script src="DataTables-1.9.4/media/js/jquery.dataTables.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="DataTables-1.9.4/media/css/demo_table_jui.css"/>
+<link rel="stylesheet" type="text/css" href="DataTables-1.9.4/examples/examples_support/themes/smoothness/jquery-ui-1.8.4.custom.css"/>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function(){
+	$('#tab_res').dataTable({
+			"sPaginationType":"full_numbers",
+			"bJQueryUI":true,
+			"oLanguage": {
+			      "sSearch": "Search for keywords inside the table:"
+			    },
+			"iDisplayLength": 25
+		});
+});
+</script>
 </head>
 <body>
 
@@ -216,17 +232,17 @@ else
 	<?php
 		if ( ($n_id_article != 0) && ($error_pmid == 0) )
 		{
-			print ("<table border='0' cellspacing='2' cellpadding='0' class='table_result'>");
-			print ("<tr>
-						<td align='center' width='20%' class='table_neuron_page1'> <strong>Authors</strong> </td>
-						<td align='center' width='30%' class='table_neuron_page1'> <strong>Title </strong></td>
-						<td align='center' width='20%' class='table_neuron_page1'> <strong>Journal/Book</strong> </td>
-						<td align='center' width='10%' class='table_neuron_page1'> <strong>Year </strong></td>
-						<td align='center' width='20%' class='table_neuron_page1'> <strong>PMID</strong></td>
-					</tr>");
-			print ("</table>");		
+			print ("<table border='0' cellspacing='2' cellpadding='0' class='table_result' id='tab_res' width='100%'>");
+			print ("<thead><tr>
+						<th align='center' width='20%' class='table_neuron_page1'> <strong>Authors</strong> </th>
+						<th align='center' width='30%' class='table_neuron_page1'> <strong>Title </strong></th>
+						<th align='center' width='20%' class='table_neuron_page1'> <strong>Journal/Book</strong> </th>
+						<th align='center' width='10%' class='table_neuron_page1'> <strong>Year </strong></th>
+						<th align='center' width='20%' class='table_neuron_page1'> <strong>PMID</strong></th>
+					</tr></thead><tbody>");
+			//print ("</table>");		
 		
-			print ("<table border='0' cellspacing='2' cellpadding='3' class='table_result'>");
+			//print ("<table border='0' cellspacing='2' cellpadding='3' class='table_result'>");
 			for ($i1=0; $i1<$n_id_article; $i1++)
 			{	
 				$id_article = $article -> getID_array($i1);
@@ -283,7 +299,7 @@ else
 					</tr>");		
 
 			} // end $i1
-			print ("</table>");			
+			print ("</tbody></table>");			
 		}
 		
 		
